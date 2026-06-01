@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TikTok Shop LIVEの始め方を1日で学べる無料ロードマップ。LINE登録後すぐに受け取れます。">
+  <title>TikTok Shop LIVE無料ロードマップ | LINE限定配布</title>
+  <style>
+    :root {
+      --bg: #050505;
+      --surface: #0f0f12;
+      --surface-2: #17171c;
+      --cyan: #00f2ea;
+      --pink: #ff0050;
+      --line: #06c755;
+      --text: #fff;
+      --muted: #d1d5db;
+      --dim: #8b93a3;
+      --border: rgba(255,255,255,.12);
+      --cyan-border: rgba(0,242,234,.32);
+      --cyan-shadow: 0 0 30px rgba(0,242,234,.15);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 82% 4%, rgba(0,242,234,.08), transparent 22rem),
+        radial-gradient(circle at 12% 18%, rgba(255,0,80,.05), transparent 19rem),
+        var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", Meiryo, sans-serif;
+      line-height: 1.8;
+      letter-spacing: .02em;
+    }
+    body::before {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      content: "";
+      opacity: .18;
+      background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 36px 36px;
+      mask-image: linear-gradient(to bottom, black, transparent 85%);
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    .container { width: min(1080px, calc(100% - 40px)); margin-inline: auto; }
+    .section { position: relative; padding: 94px 0; overflow: hidden; }
+    .section-black, .section-light, .section-soft { color: #fff; background: #050505; }
+    .section-head { max-width: 760px; margin: 0 auto 34px; text-align: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; margin: 0 0 12px; color: var(--cyan); font-size: 11px; font-weight: 900; letter-spacing: .16em; }
+    .eyebrow::before { width: 20px; height: 1px; content: ""; background: var(--cyan); box-shadow: 0 0 10px var(--cyan); }
+    h1, h2, h3, p { margin-top: 0; }
+    h2 { margin-bottom: 0; font-size: clamp(29px, 4vw, 46px); font-weight: 950; line-height: 1.35; letter-spacing: -.045em; }
+    .lead { margin: 15px auto 0; color: var(--muted); font-size: 15px; }
+    .text-cyan { color: var(--cyan); text-shadow: 0 0 18px rgba(0,242,234,.3); }
+    .text-pink { color: #ff5b8f; text-shadow: 0 0 18px rgba(255,0,80,.22); }
+    .sp-only { display: none; }
+    .pc-only { display: inline; }
+    .note { margin: 10px 0 0; color: var(--dim); font-size: 11px; text-align: center; }
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .65s ease, transform .65s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+    .section-light .lead, .section-soft .lead { color: var(--muted); }
+    .section-light .eyebrow, .section-soft .eyebrow { color: var(--cyan); }
+    .section-light .eyebrow::before, .section-soft .eyebrow::before { background: var(--cyan); box-shadow: 0 0 10px var(--cyan); }
+    .section-light .text-cyan, .section-soft .text-cyan { color: var(--cyan); text-shadow: 0 0 18px rgba(0,242,234,.3); }
+    .section-light .text-pink, .section-soft .text-pink { color: #ff5b8f; text-shadow: 0 0 18px rgba(255,0,80,.22); }
+    .section-light .cta-meta, .section-soft .cta-meta { color: var(--muted); }
+
+    /* Header */
+    .topbar { position: fixed; top: 0; right: 0; left: 0; z-index: 20; height: 56px; background: rgba(5,5,5,.84); border-bottom: 1px solid var(--border); backdrop-filter: blur(18px); }
+    .topbar-inner { display: flex; align-items: center; justify-content: space-between; height: 100%; }
+    .brand { display: flex; align-items: center; gap: 9px; font-size: 12px; font-weight: 950; letter-spacing: .04em; }
+    .brand-mark { position: relative; width: 21px; height: 21px; border: 2px solid var(--cyan); border-radius: 7px; box-shadow: 3px 3px 0 var(--pink); transform: rotate(-8deg); }
+    .brand-mark::after { position: absolute; inset: 5px; content: ""; background: #fff; border-radius: 50%; }
+    .topbar-cta { padding: 8px 13px; color: #fff; background: var(--line); border-radius: 999px; font-size: 11px; font-weight: 900; }
+
+    /* CTA */
+    .cta-btn {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: min(100%, 460px);
+      min-height: 68px;
+      padding: 13px 18px;
+      overflow: hidden;
+      color: #fff;
+      background: linear-gradient(135deg, #06c755, #00a941);
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 13px;
+      box-shadow: 0 12px 32px rgba(6,199,85,.28), inset 0 1px 0 rgba(255,255,255,.25);
+      font-size: 16px;
+      font-weight: 950;
+      line-height: 1.35;
+      text-align: center;
+      transition: transform .22s ease, box-shadow .22s ease;
+    }
+    .cta-btn::after { position: absolute; top: -70%; left: -30%; width: 15%; height: 240%; content: ""; background: rgba(255,255,255,.28); transform: rotate(24deg); animation: shine 3.8s infinite; }
+    .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(6,199,85,.4); }
+    .cta-icon { display: grid; width: 27px; height: 27px; flex: 0 0 auto; place-items: center; color: var(--line); background: #fff; border-radius: 50%; font-size: 12px; font-weight: 950; }
+    .cta-meta { margin: 9px 0 0; color: var(--muted); font-size: 12px; font-weight: 800; }
+    .cta-block { display: grid; justify-items: center; margin-top: 30px; text-align: center; }
+    .fixed-cta { position: fixed; right: 0; bottom: 0; left: 0; z-index: 30; display: none; padding: 8px 13px calc(8px + env(safe-area-inset-bottom)); background: rgba(5,5,5,.88); border-top: 1px solid var(--border); backdrop-filter: blur(16px); transform: translateY(120%); transition: transform .35s ease; }
+    .fixed-cta.show { transform: none; }
+    .fixed-cta .cta-btn { min-height: 56px; margin-inline: auto; border-radius: 11px; font-size: 14px; }
+    @keyframes shine { 0%, 70% { left: -30%; } 100% { left: 125%; } }
+
+    /* Shared cards */
+    .cards { display: grid; gap: 14px; }
+    .card { position: relative; padding: 24px; background: #fff; border: 1px solid #e5e7eb; border-radius: 22px; box-shadow: 0 18px 50px rgba(0,0,0,.28); transition: transform .25s ease, box-shadow .25s ease; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 24px 58px rgba(0,0,0,.34); }
+    .card::before { position: absolute; top: 0; right: 20px; left: 20px; height: 1px; content: ""; background: linear-gradient(90deg, transparent, rgba(0,242,234,.55), transparent); }
+    .card-icon { display: grid; width: 38px; height: 38px; place-items: center; color: var(--cyan); background: rgba(0,242,234,.08); border: 1px solid rgba(0,242,234,.24); border-radius: 11px; font-size: 19px; font-weight: 950; }
+    .card h3 { margin: 13px 0 6px; color: #111827; font-size: 17px; line-height: 1.55; }
+    .card p { margin-bottom: 0; color: #4b5563; font-size: 13px; }
+    .section-light .card, .section-soft .card { background: #fff; border-color: #e5e7eb; box-shadow: 0 18px 50px rgba(0,0,0,.28); }
+    .section-light .card::before, .section-soft .card::before { background: linear-gradient(90deg, transparent, rgba(0,189,182,.42), transparent); }
+    .section-light .card-icon, .section-soft .card-icon { color: #008f8a; background: #ecfeff; border-color: #b8f4f1; }
+    .section-light .card p, .section-soft .card p { color: #4b5563; }
+
+    /* Production image frame. Keep only these three image slots in the LP. */
+    .image-frame { width: min(100%, 880px); margin: 30px auto 0; padding: 8px; background: rgba(15,15,18,.86); border: 1px solid var(--cyan-border); border-radius: 30px; box-shadow: 0 24px 80px rgba(0,242,234,.12), 0 24px 80px rgba(255,0,80,.10); }
+    .production-image { display: block; width: 100%; height: auto; border-radius: 22px; }
+    .image-placeholder { display: none; min-height: 260px; padding: 30px 18px; place-items: center; align-content: center; gap: 8px; color: var(--muted); background: linear-gradient(145deg, rgba(0,242,234,.06), rgba(255,0,80,.05)); border: 1px dashed rgba(0,242,234,.4); border-radius: 11px; text-align: center; }
+    .image-placeholder strong { color: var(--cyan); font-size: 16px; }
+    .image-placeholder code { color: #fff; font-size: 12px; }
+    .image-frame.missing .production-image { display: none; }
+    .image-frame.missing .image-placeholder { display: grid; }
+    .content-visual-frame { margin-top: 28px; }
+    .concerns-visual-frame { width: min(100%, 800px); }
+    .why-visual-frame { width: min(100%, 760px); }
+    .why-visual-frame + .why-visual-frame { margin-top: 18px; }
+    .reasons-visual-frame { width: min(100%, 940px); }
+
+    /* Market proof: a verified public case, shown separately from the beginner guidance. */
+    .market-proof { padding-top: 0; }
+    .proof-panel { max-width: 900px; margin: 0 auto; padding: 34px 28px; overflow: hidden; background: linear-gradient(145deg, #101216, #191c22); border: 1px solid rgba(255,0,80,.34); border-radius: 26px; box-shadow: 0 24px 64px rgba(0,0,0,.36), 0 0 38px rgba(255,0,80,.1); text-align: center; }
+    .proof-kicker { margin: 0; color: var(--muted); font-size: 13px; font-weight: 850; }
+    .proof-panel h2 { margin-top: 8px; font-size: clamp(31px, 5vw, 54px); }
+    .proof-number { color: #ff5b8f; text-shadow: 0 0 22px rgba(255,0,80,.28); }
+    .proof-copy { max-width: 660px; margin: 15px auto 0; color: var(--muted); font-size: 14px; }
+    .proof-note { display: block; margin-top: 14px; color: var(--dim); font-size: 10px; line-height: 1.7; }
+    .market-signal { max-width: 720px; margin: 20px auto 0; padding: 14px 18px; color: #fff; background: linear-gradient(135deg, rgba(0,242,234,.1), rgba(255,0,80,.08)); border: 1px solid rgba(0,242,234,.25); border-radius: 14px; font-size: 14px; font-weight: 850; line-height: 1.75; text-align: center; }
+    .market-signal strong { color: var(--cyan); font-size: 19px; }
+
+    /* 1. Hero */
+    .hero { padding: 94px 0 68px; background: #050505; }
+    .hero-grid { display: flex; flex-direction: column; align-items: center; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 7px; padding: 6px 11px; color: #fff; background: rgba(255,0,80,.1); border: 1px solid rgba(255,0,80,.4); border-radius: 999px; font-size: 11px; font-weight: 900; }
+    .hero-badge::before { width: 7px; height: 7px; content: ""; background: var(--pink); border-radius: 50%; box-shadow: 0 0 12px var(--pink); }
+    .hero h1 { margin: 20px 0 0; font-size: clamp(26px, 3.2vw, 40px); font-weight: 950; line-height: 1.4; letter-spacing: -.05em; }
+    .hero-copy p { margin: 14px 0 0; color: var(--muted); font-size: 14px; }
+    .hero-points { display: grid; gap: 8px; margin: 16px 0 0; padding: 0; list-style: none; }
+    .hero-points li { display: flex; gap: 8px; color: #fff; font-size: 13px; font-weight: 800; }
+    .hero-points li::before { color: var(--cyan); content: "✓"; font-weight: 950; }
+    .hero .cta-btn { margin-top: 22px; }
+    .hero-image { order: 1; width: min(100%, 720px); margin-top: 0; }
+    .hero-copy { order: 2; width: min(100%, 690px); margin-top: 26px; text-align: center; }
+    .hero-action { order: 3; width: min(100%, 690px); text-align: center; }
+    .hero-points { justify-content: center; }
+    .hero-points li { justify-content: center; }
+    .hero .cta-btn { margin-inline: auto; }
+    .hero .cta-meta { text-align: center; }
+
+    /* 2. Pain */
+    .pain-grid { grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .bridge { max-width: 780px; margin: 30px auto 0; color: #fff; font-size: 19px; font-weight: 950; line-height: 1.7; text-align: center; }
+
+    /* 3. Easy reasons */
+    .reason-grid { grid-template-columns: repeat(3, 1fr); }
+    .card-label { color: #008f8a; font-size: 10px; font-weight: 950; letter-spacing: .14em; }
+    /* One generated sprite keeps the seven card visuals lightweight and consistent. */
+    .visual-card { overflow: hidden; background: #fff; border: 1px solid rgba(255,255,255,.16); border-radius: 23px; box-shadow: 0 20px 52px rgba(0,0,0,.34); transition: transform .25s ease, box-shadow .25s ease; }
+    .visual-card:hover { transform: translateY(-6px); box-shadow: 0 27px 62px rgba(0,0,0,.42); }
+    .visual-card-top { position: relative; display: grid; height: 138px; place-items: center; overflow: visible; background: linear-gradient(145deg, #303036, #17171b); }
+    .visual-card-top::after { position: absolute; right: 0; bottom: 0; left: 0; height: 2px; content: ""; background: linear-gradient(90deg, transparent, rgba(0,242,234,.8), rgba(255,0,80,.7), transparent); }
+    .visual-card-photo { width: 148px; height: 148px; margin-top: -26px; background-image: url("assets/images/card-visual-sprite.png"); background-repeat: no-repeat; background-size: 400% 200%; border: 5px solid #fff; border-radius: 50%; box-shadow: 0 12px 25px rgba(0,0,0,.28); }
+    .sprite-1 { background-position: 0 0; }
+    .sprite-2 { background-position: 33.333% 0; }
+    .sprite-3 { background-position: 66.666% 0; }
+    .sprite-4 { background-position: 100% 0; }
+    .sprite-5 { background-position: 0 100%; }
+    .sprite-6 { background-position: 33.333% 100%; }
+    .sprite-7 { background-position: 66.666% 100%; }
+    .visual-card-body { display: grid; min-height: 148px; padding: 24px 18px 22px; align-content: center; text-align: center; }
+    .visual-card-body h3 { margin: 0; color: #111827; font-size: 17px; font-weight: 950; line-height: 1.65; letter-spacing: -.025em; }
+    .visual-card-body p { margin: 9px 0 0; color: #4b5563; font-size: 12px; line-height: 1.75; }
+    .visual-card-body .card-label { display: block; margin-bottom: 8px; }
+    .reason-card .visual-card-top { height: 158px; background: linear-gradient(145deg, #263438, #16191c); }
+    .reason-card .visual-card-photo { width: 166px; height: 166px; }
+    .reason-card .visual-card-body { min-height: 180px; padding: 25px 23px; }
+    .reason-card .visual-card-body h3 { font-size: 18px; }
+
+    /* Legacy HTML fallbacks are kept styled for future copy tests. Production uses the visual. */
+    .why-panel { padding: 30px; color: #111827; background: linear-gradient(145deg, #fff, #f8fbfc); border: 1px solid #e5e7eb; border-radius: 28px; box-shadow: 0 22px 62px rgba(0,0,0,.34); }
+    .why-panel-top { display: grid; grid-template-columns: 1.04fr .96fr; gap: 24px; align-items: center; padding-bottom: 24px; border-bottom: 1px solid #e5e7eb; }
+    .why-panel h3 { margin: 0; font-size: clamp(25px, 3vw, 37px); line-height: 1.42; letter-spacing: -.05em; }
+    .why-panel-copy p { margin: 12px 0 0; color: #4b5563; font-size: 14px; }
+    .phase-mini { padding: 18px; background: #111318; border-radius: 18px; }
+    .phase-mini-label { color: var(--cyan); font-size: 10px; font-weight: 950; letter-spacing: .13em; }
+    .phase-track { position: relative; height: 8px; margin: 30px 4px 15px; background: linear-gradient(90deg, var(--cyan), #9ca3af 52%, #4b5563); border-radius: 999px; }
+    .phase-pin { position: absolute; top: -22px; left: 14%; padding: 3px 8px; color: #fff; background: var(--pink); border-radius: 999px; box-shadow: 0 0 14px rgba(255,0,80,.38); font-size: 10px; font-weight: 950; }
+    .phase-points { display: flex; justify-content: space-between; color: #9ca3af; font-size: 10px; font-weight: 800; }
+    .phase-points strong { color: var(--cyan); }
+    .why-reasons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 22px; }
+    .why-reason { padding: 17px; background: #f7f8fa; border: 1px solid #e5e7eb; border-radius: 15px; }
+    .why-no { color: #008f8a; font-size: 10px; font-weight: 950; letter-spacing: .13em; }
+    .why-reason h4 { margin: 8px 0 5px; font-size: 15px; line-height: 1.55; }
+    .why-reason p { margin: 0; color: #4b5563; font-size: 12px; line-height: 1.75; }
+
+    /* 4. Beginner-friendly reasons: icon cards intentionally differ from problem cards. */
+    .reason-info { min-height: 100%; background: linear-gradient(145deg, #fff, #f8fbfc); }
+    .reason-info .card-icon { width: 54px; height: 54px; margin-top: 13px; color: #008f8a; background: linear-gradient(145deg, #d9fffd, #f3ffff); border-color: #b8f4f1; border-radius: 16px; font-size: 24px; }
+
+    /* 6. Bonus */
+    .bonus-grid { grid-template-columns: repeat(4, 1fr); }
+    .bonus-no { color: var(--cyan); font-size: 11px; font-weight: 950; letter-spacing: .12em; }
+    .bonus-card .card-icon { margin-top: 11px; }
+    .bonus-card h3 { font-size: 15px; }
+    .bonus-card p { font-size: 12px; }
+    .benefit-panel { display: grid; grid-template-columns: 1.12fr .88fr; gap: 24px; padding: 28px; color: #111827; background: linear-gradient(145deg, #fff, #f9fbfc); border: 1px solid #e5e7eb; border-radius: 28px; box-shadow: 0 22px 62px rgba(0,0,0,.34); }
+    .benefit-thumbnail { position: relative; align-self: center; overflow: hidden; background: #121318; border: 1px solid rgba(0,242,234,.32); border-radius: 19px; box-shadow: 0 18px 38px rgba(0,0,0,.24), 0 0 32px rgba(255,0,80,.1); }
+    .benefit-thumbnail img { display: block; width: 100%; height: auto; }
+    .benefit-thumbnail-tag { position: absolute; right: 12px; bottom: 12px; padding: 6px 10px; color: #fff; background: rgba(255,0,80,.92); border: 1px solid rgba(255,255,255,.32); border-radius: 999px; box-shadow: 0 8px 20px rgba(255,0,80,.22); font-size: 10px; font-weight: 950; }
+    .benefit-list { display: grid; gap: 9px; align-content: center; }
+    .benefit-item { display: grid; grid-template-columns: 44px 1fr; gap: 11px; align-items: center; padding: 12px; background: #f7f8fa; border: 1px solid #e5e7eb; border-radius: 13px; }
+    .benefit-item b { color: #008f8a; font-size: 11px; letter-spacing: .08em; }
+    .benefit-item h3 { margin: 1px 0 0; font-size: 14px; line-height: 1.45; }
+    .benefit-item-icon { display: grid; width: 42px; height: 42px; place-items: center; color: #008f8a; background: #e9ffff; border-radius: 12px; font-size: 18px; font-weight: 950; }
+
+    /* 8. Voices */
+    .voice-slider-wrap { position: relative; max-width: 920px; margin: 0 auto; }
+    .voice-slider { display: flex; gap: 16px; padding: 18px 4px 26px; overflow-x: auto; overscroll-behavior-inline: contain; scroll-behavior: smooth; scroll-snap-type: x mandatory; scrollbar-width: none; }
+    .voice-slider::-webkit-scrollbar { display: none; }
+    .voice { min-width: min(82vw, 430px); overflow: hidden; color: #111827; background: #fff; border: 1px solid rgba(255,255,255,.32); border-radius: 24px; box-shadow: 0 22px 56px rgba(0,0,0,.34); scroll-snap-align: start; }
+    .voice-profile { position: relative; display: grid; grid-template-columns: 82px 1fr; gap: 15px; align-items: center; min-height: 132px; padding: 22px; overflow: hidden; color: #fff; background: linear-gradient(145deg, #111318, #23262c); }
+    .voice-profile::after { position: absolute; right: -60px; bottom: -80px; width: 180px; height: 180px; content: ""; background: radial-gradient(circle, rgba(0,242,234,.22), transparent 67%); }
+    .voice:nth-child(2) .voice-profile::after { background: radial-gradient(circle, rgba(255,0,80,.18), transparent 67%); }
+    .voice-avatar { position: relative; display: block; width: 82px; height: 82px; overflow: hidden; background: radial-gradient(circle at 50% 35%, #56616a, #1b2025 68%); border: 1px solid rgba(0,242,234,.5); border-radius: 50%; box-shadow: 0 0 0 5px rgba(0,242,234,.07), 0 10px 25px rgba(0,0,0,.32); }
+    .voice:nth-child(2) .voice-avatar { border-color: rgba(255,0,80,.55); box-shadow: 0 0 0 5px rgba(255,0,80,.07), 0 10px 25px rgba(0,0,0,.32); }
+    .voice-avatar::before { position: absolute; top: 16px; left: 27px; width: 29px; height: 29px; content: ""; background: linear-gradient(#111820, #080b0f); border-radius: 50%; box-shadow: inset 0 -3px 5px rgba(255,255,255,.06); }
+    .voice-avatar::after { position: absolute; bottom: -19px; left: 10px; width: 62px; height: 55px; content: ""; background: linear-gradient(#121a22, #06080b); border-radius: 46% 46% 0 0; box-shadow: inset 0 4px 8px rgba(255,255,255,.05); }
+    .voice-profile small { display: block; color: var(--cyan); font-size: 10px; font-weight: 950; letter-spacing: .14em; }
+    .voice:nth-child(2) .voice-profile small { color: #ff759e; }
+    .voice h3 { position: relative; z-index: 1; margin: 6px 0 0; font-size: 16px; line-height: 1.55; }
+    .voice-body { padding: 22px; }
+    .voice-metric-label { color: #6b7280; font-size: 10px; font-weight: 950; letter-spacing: .14em; }
+    .voice-metric { margin: 5px 0 0; color: #111827; font-size: 25px; font-weight: 950; line-height: 1.35; letter-spacing: -.04em; }
+    .voice-metric strong { color: #ff0050; font-size: 34px; }
+    .voice p { margin: 14px 0 0; color: #4b5563; font-size: 13px; font-weight: 700; line-height: 1.8; }
+    .voice-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 15px; }
+    .voice-tag { padding: 5px 8px; color: #008f8a; background: #ecfeff; border: 1px solid #c7f9f7; border-radius: 999px; font-size: 10px; font-weight: 900; }
+    .voice-tag.pink { color: #d70b4b; background: #fff1f5; border-color: #ffd4e1; }
+    .voice-slider-controls { display: flex; justify-content: center; gap: 10px; margin-top: 5px; }
+    .voice-slider-btn { display: grid; width: 42px; height: 42px; place-items: center; color: #fff; background: #15171b; border: 1px solid rgba(0,242,234,.35); border-radius: 50%; box-shadow: 0 8px 22px rgba(0,0,0,.24); cursor: pointer; font-size: 20px; transition: transform .2s ease, border-color .2s ease; }
+    .voice-slider-btn:hover { border-color: var(--cyan); transform: translateY(-2px); }
+    .voice-slider-note { margin: 15px auto 0; color: var(--dim); font-size: 10px; line-height: 1.7; text-align: center; }
+
+    /* 9. School */
+    .school-box { display: grid; grid-template-columns: .92fr 1.08fr; gap: 24px; padding: 28px; color: #111827; background: linear-gradient(145deg, #fff, #f9fbfc); border: 1px solid #e5e7eb; border-radius: 26px; box-shadow: 0 18px 50px rgba(0,0,0,.28); }
+    .school-copy h3 { margin-bottom: 8px; font-size: 23px; line-height: 1.5; }
+    .school-copy p { margin-bottom: 0; color: #4b5563; font-size: 13px; }
+    .school-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin: 0; padding: 0; list-style: none; }
+    .school-list li { padding: 11px; color: #374151; background: #f7f8fa; border: 1px solid #e5e7eb; border-radius: 8px; font-size: 12px; font-weight: 800; }
+    .school-list li { display: flex; align-items: center; gap: 7px; }
+    .school-list-icon { display: grid; width: 25px; height: 25px; flex: 0 0 auto; place-items: center; color: #008f8a; background: #ecfeff; border-radius: 7px; font-size: 13px; font-weight: 950; }
+
+    /* 10. FAQ */
+    .faq { display: grid; gap: 9px; max-width: 820px; margin: 0 auto; }
+    .faq-item { overflow: hidden; background: #fff; border: 1px solid #e5e7eb; border-radius: 11px; box-shadow: 0 5px 16px rgba(17,24,39,.04); }
+    .faq-q { display: flex; width: 100%; padding: 16px; align-items: center; justify-content: space-between; gap: 10px; color: #111827; background: transparent; border: 0; cursor: pointer; font-size: 13px; font-weight: 900; text-align: left; }
+    .faq-q span:first-child::before { margin-right: 8px; color: var(--cyan); content: "Q."; }
+    .faq-plus { color: var(--cyan); font-size: 21px; line-height: 1; transition: transform .25s ease; }
+    .faq-item.open .faq-plus { transform: rotate(45deg); }
+    .faq-a { max-height: 0; overflow: hidden; color: #4b5563; transition: max-height .3s ease; }
+    .faq-a p { margin: 0; padding: 0 16px 16px 39px; font-size: 12px; }
+
+    /* 11. Final */
+    .final { padding: 102px 0 120px; background: radial-gradient(circle at 50% 54%, rgba(0,242,234,.1), transparent 30rem); text-align: center; }
+    .final-box { max-width: 820px; margin: auto; padding: 38px 25px; background: rgba(15,15,18,.91); border: 1px solid var(--cyan-border); border-radius: 20px; box-shadow: var(--cyan-shadow); }
+    .final h2 { font-size: clamp(28px, 4vw, 44px); }
+    .final p { max-width: 650px; margin: 15px auto 0; color: var(--muted); font-size: 14px; }
+    footer { padding: 20px 0 94px; color: var(--dim); border-top: 1px solid var(--border); font-size: 10px; text-align: center; }
+
+    @media (max-width: 860px) {
+      .hero-grid { gap: 0; }
+      .pain-grid { grid-template-columns: repeat(2, 1fr); }
+      .bonus-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-panel-top, .benefit-panel { grid-template-columns: 1fr; }
+      .school-box { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 620px) {
+      body { padding-bottom: 72px; }
+      .container { width: min(100% - 28px, 540px); }
+      .section { padding: 68px 0; }
+      .topbar { height: 51px; }
+      .topbar .container { width: min(100% - 22px, 540px); }
+      .brand { font-size: 10px; }
+      .brand-mark { width: 18px; height: 18px; }
+      .topbar-cta { padding: 7px 9px; font-size: 9px; }
+      .fixed-cta { display: block; }
+      .hero { padding: 78px 0 45px; }
+      .hero-grid { display: flex; flex-direction: column; }
+      .hero-badge { align-self: center; font-size: 10px; }
+      .hero h1 { margin: 17px 0 0; font-size: 24px; text-align: center; }
+      .hero-copy p { margin: 8px 0 0; font-size: 13px; text-align: center; }
+      .hero-points { display: none; }
+      .hero-image { order: 1; margin-top: 0; }
+      .hero-copy { order: 2; margin-top: 18px; }
+      .hero-action { order: 3; width: 100%; }
+      .hero .cta-btn { width: 100%; margin-top: 18px; }
+      .cta-btn { padding-right: 12px; padding-left: 12px; font-size: 14px; }
+      .hero .cta-meta { margin-top: 8px; }
+      .sp-only { display: inline; }
+      .pc-only { display: none; }
+      /* Full-bleed production visuals on mobile. Text and information cards keep their readable gutters. */
+      .image-frame { width: calc(100% + 28px); max-width: none; margin-right: -14px; margin-left: -14px; padding: 0; border-right: 0; border-left: 0; border-radius: 0; }
+      .production-image { border-radius: 0; }
+      .image-placeholder { min-height: 190px; padding: 20px 12px; }
+      .proof-panel { padding: 27px 18px; border-radius: 19px; }
+      .proof-panel h2 { font-size: 29px; }
+      .proof-copy { font-size: 13px; }
+      .market-signal { padding: 12px 13px; font-size: 12px; }
+      .market-signal strong { font-size: 17px; }
+      .section-head { margin-bottom: 25px; }
+      h2 { font-size: 28px; }
+      .lead { margin-top: 12px; font-size: 13px; }
+      .pain-grid, .reason-grid, .bonus-grid { grid-template-columns: 1fr; }
+      .voice-slider { margin-right: -14px; padding-right: 14px; }
+      .voice { min-width: min(85vw, 340px); padding: 21px; }
+      .bridge { margin-top: 24px; font-size: 16px; }
+      .card { padding: 17px; }
+      .card h3 { font-size: 15px; }
+      .card p { font-size: 12px; }
+      .visual-card { width: min(100%, 390px); margin-inline: auto; }
+      .visual-card-top { height: 122px; }
+      .visual-card-photo { width: 136px; height: 136px; margin-top: -22px; }
+      .visual-card-body { min-height: 116px; padding: 20px 16px; }
+      .visual-card-body h3 { font-size: 16px; }
+      .reason-card .visual-card-top { height: 138px; }
+      .reason-card .visual-card-photo { width: 150px; height: 150px; }
+      .reason-card .visual-card-body { min-height: 146px; padding: 21px 18px; }
+      .reason-card .visual-card-body h3 { font-size: 17px; }
+      .why-panel { padding: 20px; border-radius: 22px; }
+      .why-panel-top { gap: 18px; padding-bottom: 19px; }
+      .why-reasons { grid-template-columns: 1fr; }
+      .benefit-panel { padding: 18px; border-radius: 22px; }
+      .bonus-card { display: grid; grid-template-columns: 47px 1fr; column-gap: 10px; align-items: center; }
+      .bonus-no { grid-column: 1 / -1; }
+      .bonus-card .card-icon { margin-top: 7px; }
+      .bonus-card h3 { margin: 7px 0 1px; }
+      .bonus-card p { grid-column: 2; }
+      .school-box { padding: 18px; }
+      .school-copy h3 { font-size: 19px; }
+      .school-list { grid-template-columns: 1fr; gap: 6px; }
+      .faq-q { padding: 14px; font-size: 12px; }
+      .faq-a p { padding: 0 14px 14px 35px; font-size: 11px; }
+      .final { padding: 73px 0 78px; }
+      .final-box { padding: 28px 17px; }
+      .final .cta-btn { font-size: 13px; }
+      .final p { font-size: 13px; }
+      footer { padding-bottom: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <!-- Replace this placeholder brand with the approved production logo if needed. -->
+      <a class="brand" href="#top" aria-label="ページ上部へ"><span class="brand-mark"></span>TikTok Shop LIVE GUIDE</a>
+      <a class="topbar-cta line-link" href="https://lin.ee/pGL7LOU">無料で受け取る</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. FV: replace only assets/images/hero-tiktok-live.png with the approved production visual. -->
+    <section class="hero section" id="top">
+      <div class="container hero-grid">
+        <div class="image-frame hero-image reveal">
+          <img class="production-image" src="assets/images/hero-tiktok-live.png" alt="TikTok Shop LIVEの始め方を学べる無料ロードマップ">
+          <div class="image-placeholder"><strong>FVメインビジュアル</strong><code>assets/images/hero-tiktok-live.png</code><span>このパスに制作済み画像を配置してください</span></div>
+        </div>
+        <div class="hero-copy reveal">
+          <span class="hero-badge">LINE登録者限定・無料配布</span>
+          <h1>TikTok Shop LIVEの始め方を<br><span class="text-cyan">LINEで無料配布中</span></h1>
+          <p>未経験でも迷わない。まずは1日で全体像をつかむ。</p>
+        </div>
+        <div class="hero-action reveal">
+          <ul class="hero-points">
+            <li>登録後すぐにロードマップを受け取れる</li>
+            <li>スマホで見られる初心者向けガイド</li>
+          </ul>
+          <a class="cta-btn line-link" href="https://lin.ee/pGL7LOU"><span class="cta-icon">L</span>LINEで無料ロードマップを受け取る</a>
+          <p class="cta-meta">登録後すぐ受け取り ｜ 今だけ無料</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. WHY NOW visuals: replace only assets/images/why-now-growth-phase.png and assets/images/why-now-three-reasons.png. -->
+    <section class="section section-black" id="why-now">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">WHY NOW</p>
+          <h2>TikTok Shop LIVEは<br><span class="text-pink">今のうちに始める人</span><br class="sp-only">が有利です</h2>
+          <p class="lead">TikTok Shopは、2025年6月30日に日本で提供が始まった新しい領域です。市場が広がる前に、LIVE販売の型を先に身につけることが差になります。</p>
+          <p class="market-signal">日本提供開始から半年時点で<br><strong>流通総額の約70％</strong>が<br class="sp-only">動画やLIVE配信などのコンテンツ起点</p>
+        </div>
+        <div class="image-frame content-visual-frame why-visual-frame reveal">
+          <img class="production-image" src="assets/images/why-now-growth-phase.png" alt="TikTok Shop LIVE市場の成長フェーズと今始める重要性">
+          <div class="image-placeholder"><strong>成長フェーズ図</strong><code>assets/images/why-now-growth-phase.png</code><span>このパスに制作済み画像を配置してください</span></div>
+        </div>
+        <div class="image-frame why-visual-frame reveal">
+          <img class="production-image" src="assets/images/why-now-three-reasons.png" alt="TikTok Shop LIVEを今のうちに始める3つの理由">
+          <div class="image-placeholder"><strong>今始める3つの理由</strong><code>assets/images/why-now-three-reasons.png</code><span>このパスに制作済み画像を配置してください</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Verified public market example. -->
+    <section class="section section-black market-proof" id="market-proof">
+      <div class="container">
+        <div class="proof-panel reveal">
+          <p class="eyebrow">MARKET PROOF</p>
+          <p class="proof-kicker">国内の公開事例では</p>
+          <h2>TikTok Shop公式イベントで<br><span class="proof-number">累計GMV 1.1億円</span>を突破</h2>
+          <p class="proof-copy">市場が動き始めた今、ライブ販売の流れと型を早めに学ぶ価値があります。</p>
+          <small class="proof-note">※KYOGOKU JAPANの公開事例です。個別の成果を保証するものではありません。</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. BEGINNER FRIENDLY visual: replace only assets/images/beginner-reasons-visual.png. -->
+    <section class="section section-light" id="easy">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">BEGINNER FRIENDLY</p>
+          <h2>TikTok Shop LIVEが<br><span class="text-cyan">初心者でも始めやすい理由</span></h2>
+          <p class="lead">必要なのは、特別なセンスよりも<br class="sp-only">「流れ」と「型」です。</p>
+        </div>
+        <div class="image-frame content-visual-frame reasons-visual-frame reveal">
+          <img class="production-image" src="assets/images/beginner-reasons-visual.png" alt="TikTok Shop LIVEが初心者でも始めやすい3つの理由">
+          <div class="image-placeholder"><strong>初心者向け理由ビジュアル</strong><code>assets/images/beginner-reasons-visual.png</code><span>このパスに制作済み画像を配置してください</span></div>
+        </div>
+        <p class="note reveal">今のうちに型を学んでおくことで、後から参入する人との差を作りやすくなります。</p>
+      </div>
+    </section>
+
+    <!-- 5. Simple flow visual: replace only assets/images/live-commerce-flow.png. -->
+    <section class="section section-black" id="flow">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">SIMPLE FLOW</p>
+          <h2>実は、ライブ販売は<br><span class="text-cyan">シンプルな3ステップ</span></h2>
+          <p class="lead">LIVE配信、商品紹介・コメント対応、商品カードから購入。まずはこの流れを押さえれば大丈夫です。</p>
+        </div>
+        <p class="note reveal">この流れを早めに理解すると、配信設計や商品紹介の型を先に作りやすくなります。</p>
+        <div class="image-frame reveal">
+          <img class="production-image" src="assets/images/live-commerce-flow.png" alt="TikTok Shop LIVEで商品紹介から購入につながる仕組み">
+          <div class="image-placeholder"><strong>売れる仕組み図解</strong><code>assets/images/live-commerce-flow.png</code><span>このパスに制作済み画像を配置してください</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Comparison visual: replace only assets/images/video-vs-live-commerce.png. -->
+    <section class="section section-black" id="comparison">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">COMPARISON</p>
+          <h2>動画投稿より<br><span class="text-pink">ライブコマース</span><br class="sp-only">が売りやすい理由</h2>
+          <p class="lead">リアルタイムで伝えて、その場で購入へ。視聴者と会話しながら説明できるため、購入までの心理的な距離を縮めやすいのが特徴です。</p>
+        </div>
+        <p class="note reveal">これから参入するなら、動画投稿だけでなく、ライブ販売の型を早く身につけることが重要です。</p>
+        <div class="image-frame reveal">
+          <img class="production-image" src="assets/images/video-vs-live-commerce.png?v=20260601-1103" alt="動画投稿とライブコマースの比較">
+          <div class="image-placeholder"><strong>動画投稿 vs ライブコマース比較図</strong><code>assets/images/video-vs-live-commerce.png</code><span>このパスに制作済み画像を配置してください</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. PROBLEM visual: replace only assets/images/concerns-visual.png. -->
+    <section class="section section-soft" id="concerns">
+      <div class="container">
+        <div class="section-head reveal"><p class="eyebrow">YOUR CONCERNS</p><h2>ですが、こんな悩み<br><span class="text-pink">ありませんか？</span></h2><p class="lead">TikTok Shop LIVEを始めたいけれど、最初の一歩でつまずく人は少なくありません。</p></div>
+        <div class="image-frame content-visual-frame concerns-visual-frame reveal">
+          <img class="production-image" src="assets/images/concerns-visual.png?v=20260601-1103" alt="TikTok Shop LIVEを始める前によくある4つの悩み">
+          <div class="image-placeholder"><strong>悩み訴求ビジュアル</strong><code>assets/images/concerns-visual.png</code><span>このパスに制作済み画像を配置してください</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. LINE bonuses: one set-style panel, not another card grid. -->
+    <section class="section section-light" id="bonus">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">BENEFIT</p>
+          <h2>そんな方のために<br><span class="text-cyan">無料ロードマップ</span>をプレゼント</h2>
+          <p class="lead">全体像、商品紹介、コメント対応、購入導線まで。これを読めば、まずはスタートラインに立てます。</p>
+        </div>
+        <div class="benefit-panel reveal">
+          <!-- Replace only assets/images/free-roadmap-thumbnail.png when the distributed roadmap thumbnail changes. -->
+          <div class="benefit-thumbnail"><img src="assets/images/free-roadmap-thumbnail.png" alt="TikTok Shop LIVE初心者向けスタートロードマップ"><span class="benefit-thumbnail-tag">LINE限定配布</span></div>
+          <div class="benefit-list">
+            <article class="benefit-item"><span class="benefit-item-icon">▣</span><div><b>BONUS 01</b><h3>TikTok Shop LIVE開始ガイド</h3></div></article>
+            <article class="benefit-item"><span class="benefit-item-icon">✎</span><div><b>BONUS 02</b><h3>ライブ販売台本テンプレ</h3></div></article>
+            <article class="benefit-item"><span class="benefit-item-icon">♧</span><div><b>BONUS 03</b><h3>コメント対応トーク集</h3></div></article>
+            <article class="benefit-item"><span class="benefit-item-icon">✓</span><div><b>BONUS 04</b><h3>配信前チェックリスト</h3></div></article>
+          </div>
+        </div>
+        <p class="note reveal">競合が増える前に、まずは全体像をつかんでおきましょう。</p>
+        <div class="cta-block reveal"><a class="cta-btn line-link" href="https://lin.ee/pGL7LOU"><span class="cta-icon">L</span>LINEで無料ロードマップを受け取る</a><p class="cta-meta">登録後すぐ受け取り ｜ 今だけ無料</p></div>
+      </div>
+    </section>
+
+    <!-- 9. Seminar: a practical next step for readers who want to see and experience a real LIVE flow. -->
+    <section class="section section-light" id="seminar">
+      <div class="container">
+        <div class="section-head reveal"><p class="eyebrow">LIVE SEMINAR</p><h2>まだ難しそうと感じた方へ<br><span class="text-cyan">ライブ体験セミナー</span>も<br class="sp-only">ご用意しています</h2></div>
+        <div class="school-box reveal">
+          <div class="school-copy"><h3>実際のライブ配信を<br>見て、体験して、理解する。</h3><p>ロードマップを読んで、もう少し具体的に知りたい方へ。セミナーでは実際のライブ配信の流れを見ながら、商品紹介・コメント対応・購入導線を体験できます。詳しいご案内はLINE内でお届けします。</p></div>
+          <ul class="school-list"><li><span class="school-list-icon">◉</span>実際のLIVE配信を見学</li><li><span class="school-list-icon">◇</span>商品紹介の流れ</li><li><span class="school-list-icon">♧</span>コメント対応</li><li><span class="school-list-icon">▣</span>購入導線</li><li><span class="school-list-icon">✓</span>ライブ配信を体験</li><li><span class="school-list-icon">◎</span>初心者向け解説</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Testimonials: publish only after verifying each result and obtaining permission to display it. -->
+    <section class="section section-light" id="voices">
+      <div class="container">
+        <div class="section-head reveal"><p class="eyebrow">VOICE</p><h2>実践者の声</h2><p class="lead">働き方に合わせて、TikTok Shop LIVEへ取り組んでいます。</p></div>
+        <div class="voice-slider-wrap reveal">
+          <div class="voice-slider" id="voiceSlider">
+            <article class="voice"><div class="voice-profile"><span class="voice-avatar" aria-hidden="true"></span><div><small>CASE 01</small><h3>20代男性<br>顔出しなし<span class="pc-only">・</span><br class="sp-only">フルコミット</h3></div></div><div class="voice-body"><span class="voice-metric-label">FIRST MONTH RESULT</span><div class="voice-metric">成果報酬 <strong>60万円</strong></div><p>顔出しなしで取り組み、初月から成果報酬を獲得しました。</p><div class="voice-tags"><span class="voice-tag">顔出しなし</span><span class="voice-tag pink">初月</span></div></div></article>
+            <article class="voice"><div class="voice-profile"><span class="voice-avatar" aria-hidden="true"></span><div><small>CASE 02</small><h3>20代男性<br>副業・1日2時間</h3></div></div><div class="voice-body"><span class="voice-metric-label">MONTHLY SIDE INCOME</span><div class="voice-metric">副収入 <strong>20万円</strong></div><p>1日2時間の副業として取り組み、月20万円の副収入を獲得しました。</p><div class="voice-tags"><span class="voice-tag">副業</span><span class="voice-tag pink">1日2時間</span></div></div></article>
+            <article class="voice"><div class="voice-profile"><span class="voice-avatar" aria-hidden="true"></span><div><small>CASE 03</small><h3>30代女性<br>土日のみ配信</h3></div></div><div class="voice-body"><span class="voice-metric-label">MONTHLY SALES</span><div class="voice-metric">売上 <strong>30万円</strong></div><p>土日だけの配信で、月30万円の売上を獲得しました。</p><div class="voice-tags"><span class="voice-tag">土日のみ</span><span class="voice-tag pink">在宅副業</span></div></div></article>
+          </div>
+          <div class="voice-slider-controls" aria-label="口コミスライダー操作">
+            <button class="voice-slider-btn" type="button" data-voice-slide="-1" aria-label="前の口コミを見る">‹</button>
+            <button class="voice-slider-btn" type="button" data-voice-slide="1" aria-label="次の口コミを見る">›</button>
+          </div>
+        </div>
+        <p class="voice-slider-note reveal">※実践者の一例です。成果には個人差があり、同様の成果を保証するものではありません。</p>
+      </div>
+    </section>
+
+    <!-- 11. FAQ -->
+    <section class="section section-soft" id="faq">
+      <div class="container">
+        <div class="section-head reveal"><p class="eyebrow">FAQ</p><h2>よくある質問</h2></div>
+        <div class="faq reveal">
+          <div class="faq-item"><button class="faq-q" type="button"><span>未経験でも大丈夫ですか？</span><span class="faq-plus">+</span></button><div class="faq-a"><p>はい。TikTok Shop LIVEが初めての方でも全体像が分かる内容です。</p></div></div>
+          <div class="faq-item"><button class="faq-q" type="button"><span>顔出しは必要ですか？</span><span class="faq-plus">+</span></button><div class="faq-a"><p>顔出しなしで学べる内容も含まれています。</p></div></div>
+          <div class="faq-item"><button class="faq-q" type="button"><span>ライブ配信が苦手でも大丈夫ですか？</span><span class="faq-plus">+</span></button><div class="faq-a"><p>台本や話す流れを用意することで、未経験でも始めやすくなります。</p></div></div>
+          <div class="faq-item"><button class="faq-q" type="button"><span>スマホだけでも見られますか？</span><span class="faq-plus">+</span></button><div class="faq-a"><p>はい。LINEからスマホで確認できます。</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. Final CTA: HTML/CSS only. -->
+    <section class="final" id="final">
+      <div class="container">
+        <div class="final-box reveal">
+          <p class="eyebrow">START TODAY</p>
+          <h2>競合が増える前に<br><span class="text-cyan">まずは1日で全体像</span><br class="sp-only">をつかむ</h2>
+          <p>TikTok Shop LIVEは、早く型を学び、実践イメージを持つほど動き出しやすくなります。無料ロードマップで、ライブ配信・商品紹介・コメント対応・購入導線を確認してください。</p>
+          <div class="cta-block"><a class="cta-btn line-link" href="https://lin.ee/pGL7LOU"><span class="cta-icon">L</span>LINEで無料ロードマップを受け取る</a><p class="cta-meta">登録後すぐ受け取り ｜ 今だけ無料</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container"><p>本ページはTikTokおよびLINEの公式ページではありません。掲載内容は学習機会のご案内であり、成果を保証するものではありません。</p><p>© 2026 TikTok Shop LIVE GUIDE</p></div></footer>
+
+  <div class="fixed-cta" id="fixedCta"><a class="cta-btn line-link" href="https://lin.ee/pGL7LOU"><span class="cta-icon">L</span>LINEで無料ロードマップを受け取る</a></div>
+
+  <script>
+    // Replace only this value when the production LINE official account URL is ready.
+    const LINE_URL = "https://lin.ee/pGL7LOU";
+
+    document.querySelectorAll(".line-link").forEach((link) => {
+      link.href = LINE_URL;
+      link.addEventListener("click", () => {
+        // Add production analytics events here, for example GTM or Meta Pixel.
+      });
+    });
+
+    // Show an intentional placeholder until each approved production image is placed.
+    document.querySelectorAll(".production-image").forEach((image) => {
+      const markMissing = () => image.closest(".image-frame").classList.add("missing");
+      image.addEventListener("error", markMissing);
+      if (image.complete && image.naturalWidth === 0) markMissing();
+    });
+
+    document.querySelectorAll(".faq-q").forEach((button) => {
+      button.addEventListener("click", () => {
+        const item = button.parentElement;
+        const answer = item.querySelector(".faq-a");
+        item.classList.toggle("open");
+        answer.style.maxHeight = item.classList.contains("open") ? `${answer.scrollHeight}px` : "0";
+      });
+    });
+
+    const voiceSlider = document.getElementById("voiceSlider");
+    document.querySelectorAll("[data-voice-slide]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const card = voiceSlider.querySelector(".voice");
+        const gap = 16;
+        voiceSlider.scrollBy({ left: Number(button.dataset.voiceSlide) * (card.offsetWidth + gap), behavior: "smooth" });
+      });
+    });
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+
+    const fixedCta = document.getElementById("fixedCta");
+    const toggleFixedCta = () => fixedCta.classList.toggle("show", window.scrollY > 430);
+    window.addEventListener("scroll", toggleFixedCta, { passive: true });
+    toggleFixedCta();
+  </script>
+</body>
+</html>
